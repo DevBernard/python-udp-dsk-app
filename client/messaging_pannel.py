@@ -29,13 +29,11 @@ class MessagingApp:
     #     self.message_recv_thread.join()
 
     def message_receiver(self):
-        print('1')
         while True:
-            print('2')
             try:
                 msg, _ = self.client.recvfrom(cutils.STD_MSG_SIZE)
             except socket_timeout:
-                break 
+                continue 
             if msg:
                 tipo, _, _, _, r_nome, texto = cutils.unpackMessage(msg)
                 if tipo == cutils.MSG_ERRO:
