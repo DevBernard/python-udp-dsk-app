@@ -75,7 +75,7 @@ def sendMsg(server, msg, addr):
 
 def make_standard_message(dest):
     texto = f'Oi, sou o {SERVER_NAME}, meu id eh {SERVER_ID}'
-    packMessage(
+    send_msg =  packMessage(
         tipo=MSG_MSG,
         remetente=SERVER_ID,
         destinatario=dest,
@@ -83,3 +83,4 @@ def make_standard_message(dest):
         nome=SERVER_NAME,
         texto=texto
     )
+    return send_msg
