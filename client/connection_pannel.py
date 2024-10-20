@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import simpledialog, messagebox
+from tkinter import  messagebox
 import re
 import client_utils as cutils
 

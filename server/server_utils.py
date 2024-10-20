@@ -59,7 +59,6 @@ def sendOi(server, dest, addr, msg):
     server.sendto(msg, addr)
 
 def sendTchau(server, dest, addr): #nao precisa retornar mensagem, mas se precisar, só tirar o return
-    return
     msg = packMessage(
         tipo=MSG_TCHAU,
         remetente=SERVER_ID,
